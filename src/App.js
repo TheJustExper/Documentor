@@ -1,29 +1,7 @@
 import React, {Component} from 'react';
 import {BrowserRouter as Router, Link, Route, Switch} from "react-router-dom";
-
+import Header from "./components/header/header";
 import "./scss/file.scss";
-
-function Header() {
-    return (
-        <div id="header">
-                    <div className="layer">
-                        <h1>Documentor</h1>
-                        <ul>
-                            <li>Home</li>
-                            <li>Docs</li>
-                            <li>Support</li>
-                            <li>Dashboard</li>
-                            <li>Github</li>
-                        </ul>
-                    </div>
-                    <div className="layer">
-                        <div className="input">
-                            <input placeholder="Search documentation..."></input><button id="search">Search</button>
-                        </div>
-                    </div>
-                </div>
-    )
-}
 
 function Sidebar() {
     return (
