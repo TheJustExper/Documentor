@@ -2,21 +2,19 @@ import React, { Component, useState, useEffect } from 'react';
 import { BrowserRouter as Router, Link, Route, Switch } from "react-router-dom";
 
 import Header from "../header/header";
-import Sidebar from "../sidebar/sidebar";
+import Middle from "../middle/middle";
 
 import "../../scss/file.scss"
 
-class App extends Component {
-    render() {
-        return (
-            <div id="main">
-                <Header/>
-                <div className="content">
+function App() {
+    let [ loggedIn, setLoggedIn ] = useState(false);
 
-                </div>
-            </div>
-        );
-    }
+    return (
+        <div id="main">
+            <Header/>
+            <Middle/>
+        </div>
+    );
 }
 
 export default App;

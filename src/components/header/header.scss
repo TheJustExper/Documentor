@@ -1,0 +1,33 @@
+$grayText: #818384;
+
+#header {
+    width: 100%;
+    background-color: #1a1a1b;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 25px 15px 25px;
+    box-sizing: border-box;
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    ul {
+        display: flex;
+        align-items: center;
+
+        li {
+            margin: 0px 10px 0px 10px;
+            list-style: none;
+            font-size: 0.9rem;
+            color: $grayText;
+            transition: color .2s;
+
+            &:hover {
+                color: var(--main-color)
+            }
+        }
+    }
+}
