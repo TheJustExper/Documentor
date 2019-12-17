@@ -6,6 +6,7 @@ export default () => {
         <div id="feed">
             <div className="create-post"></div>
             <div className="post"></div>
+            <div className="post"></div>
         </div>
     )
 }
