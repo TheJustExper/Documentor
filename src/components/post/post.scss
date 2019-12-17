@@ -29,10 +29,14 @@
                width: 15px;
                height: 12px; 
                filter: invert(55%);
-                padding-top: 5px;
+               padding-top: 5px;
 
                &:first-child {
-                   transform: rotate(180deg);
+                    transform: rotate(180deg);
+               }
+
+               &:hover {
+                    filter: invert(100%);
                }
             }
         }
