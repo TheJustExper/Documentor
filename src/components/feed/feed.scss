@@ -1,0 +1,29 @@
+#feed {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    display: flex;
+    flex-direction: column;
+    width: 660px;
+    height: 100%;
+    border-radius: 4px;
+    color: white;
+    box-sizing: border-box;
+
+    .create-post {
+        width: 100%;
+        height: 60px;
+        border-radius: 4px;
+        background-color: #1a1a1b;
+        border: 1px solid #343536;
+    }
+
+    .post {
+        width: 100%;
+        height: 600px;
+        border-radius: 4px;
+        background-color: #1a1a1b;
+        border: 1px solid #343536;
+        margin-top: 20px;
+    }
+}

@@ -4,7 +4,7 @@ import "./header.scss";
 export default () => {
     return (
         <div id="header">
-            <h1>Reddit v2</h1>
+            <h1>Documentor</h1>
             <ul>
                 <li>Home</li>
                 <li>Docs</li>
