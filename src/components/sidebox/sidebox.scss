@@ -1,6 +1,94 @@
-.sidebox {
+$main-color: #3193ef;
+
+#trending {
     position: absolute;
-    top: 0px;
+    top: 620px;
+    right: 0px;
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    height: 290px;
+    background-color: #1a1a1b;
+    border: 1px solid #343536;
+    border-radius: 4px;
+    padding: 15px;
+    box-sizing: border-box;
+
+    h1 {
+        font-size: 11px;
+        color: gray;
+    }
+
+    .communities {
+        width: 100%;
+        height: 100%;
+
+        .community {
+            width: 100%;
+            height: 64px;
+            border-bottom: 1px solid #343536;
+
+            &:last-child {
+                border-bottom: none;
+            }
+
+            .inner {
+                width: 100%;
+                height: 64px;
+                max-width: 250px;
+                margin: auto;
+                display: flex;
+                align-items: center;
+                position: relative;
+
+                img {
+                    width: 30px;
+                    height: 30px;
+                    border-radius: 50%;
+                }
+
+                .text {
+                    display: flex;
+                    flex-direction: column;
+                    padding-left: 10px;
+
+                    b {
+                        color: white;
+                        font-size: 14px;
+                        margin-bottom: 3px;
+                    }
+
+                    p {
+                        color: rgba(255, 255, 255, 0.6);
+                        font-size: 12px;
+                    }
+                }
+
+                button {
+                    width: 80px;
+                    height: 30px;
+                    background-color: $main-color;
+                    color: white;
+                    border-radius: 2px;
+                    padding: 10px;
+                    box-sizing: border-box;
+                    text-align: center;
+                    position: absolute;
+                    right: 0px;
+                    border: none;
+                    line-height: 0px;
+                    font-weight: 700;
+                    font-size: 11px;
+                    text-transform: uppercase;
+                }
+            }
+        }
+    }
+}
+
+#growing {
+    position: absolute;
+    top: 200px;
     right: 0px;
     display: flex;
     flex-direction: column;

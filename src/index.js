@@ -5,7 +5,7 @@ import * as serviceWorker from './serviceWorker';
 import { BrowserRouter } from 'react-router-dom';
 
 ReactDOM.render(
-<BrowserRouter>
+  <BrowserRouter>
     <App />
   </BrowserRouter>, document.getElementById('root'));
 serviceWorker.unregister();

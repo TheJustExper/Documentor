@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Link, Route, Switch } from "react-router-dom";
 import Header from "../header/header";
 import Middle from "../middle/middle";
 
-import "../../scss/file.scss"
+import "../../scss/file.scss";
 
 function App() {
     let [ loggedIn, setLoggedIn ] = useState(false);
