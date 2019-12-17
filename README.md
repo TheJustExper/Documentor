@@ -1,7 +1,7 @@
 <div align="center">
   <h1>Reddit clone</h1>
   <p>A clone of reddit which uses React, Nodejs, Express, MongoDB</p>
-  <img src="https://i.imgur.com/QhE5fy6.png"/>
+  <img src="https://i.imgur.com/G47WcW8.png"/>
 </div>
 
 ## Installation
