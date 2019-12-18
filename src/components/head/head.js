@@ -1,3 +1,5 @@
+//Am I going mad or is this component not being used?
+
 import React, {Component} from 'react';
 import "./head.scss";
 
