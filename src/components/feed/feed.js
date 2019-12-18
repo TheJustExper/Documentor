@@ -1,7 +1,7 @@
 import React, { Component, useEffect, useState } from 'react';
 import Requests from "../../Requests";
 import DropDown from "../dropdown/dropdown";
-import Post from "../post/post";
+import Post from "./feedPost";
 import "./feed.scss";
 
 /* 
@@ -47,9 +47,9 @@ export default () => {
     return (
         <div id="feed">
             <DropDown/>
-            {feed.length > 0 ? feed.map((post) => {
-                return <Post data={post}/>
-            }) : <h1>No posts</h1>}
+            { feed.length > 0
+                ? feed.map((data, index) => <Post data={data} key={index}/>)
+                : <h1>No posts</h1> }
         </div>
     )
 }
