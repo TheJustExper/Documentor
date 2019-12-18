@@ -55,6 +55,10 @@
         .outer {
             display: flex;
             justify-content: center;
+
+            &:hover {
+                cursor: pointer;
+            }
             
             .post-image {
                 margin-top: 10px;
