@@ -28,15 +28,6 @@ export default () => {
             authorIcon: "https://miro.medium.com/max/400/1*B8c1ED3QV_yaa6PAWqDgMw.png",
             sub: "Sports",
             upvotes: 500,
-        },
-        {
-            title: "Santa is now a women",
-            description: "This is a testing post",
-            img: "https://preview.redd.it/o5sm84rfed541.jpg?width=640&height=873&crop=smart&auto=webp&s=c20c805c5601ec71b2b17a156353725b2b183e46",
-            author: "GaryGlitter",
-            authorIcon: "https://miro.medium.com/max/400/1*B8c1ED3QV_yaa6PAWqDgMw.png",
-            sub: "Random",
-            upvotes: 999,
         }
     ]);
 
