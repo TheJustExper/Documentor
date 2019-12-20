@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import "./sidebox.scss";
 
 export default () => {
@@ -26,7 +26,7 @@ export default () => {
   }
 
   return (
-    <div id="growing">
+    <div className="sidebox growing">
       <div className="header">
         <h1>Todays Top Growing Communities</h1>
       </div>

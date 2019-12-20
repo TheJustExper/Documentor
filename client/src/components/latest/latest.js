@@ -1,4 +1,4 @@
-import React, { Component, useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import Requests from "../../Requests";
 import "./latest.scss";
 
@@ -10,9 +10,9 @@ export default () => {
     });
 
     function getLatest() {
-        return [1, 2, 3, 4].map(() => {
+        return [1, 2, 3, 4].map(index => {
             return (
-                <div className="item">
+                <div className="item" key={index}>
                     <div className="image"></div>
                     <div className="text">
                         <h1>Random</h1>

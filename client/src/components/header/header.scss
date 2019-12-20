@@ -26,8 +26,13 @@ $grayText: #818384;
             color: $grayText;
             transition: color .2s;
 
-            &:hover {
-                color: var(--main-color)
+            a {
+                color: $grayText;
+                text-decoration: none;
+
+                &:hover {
+                    color: var(--main-color)
+                }
             }
         }
     }

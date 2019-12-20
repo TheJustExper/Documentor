@@ -1,9 +1,11 @@
-$grayText: #818384;
-
-#middle {
+#postPage {
     max-width: 1000px;
     width: 100%;
     height: 100%;
     margin: 30px auto;
     position: relative;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }

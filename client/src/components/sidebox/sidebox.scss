@@ -1,16 +1,78 @@
 $main-color: #3193ef;
 
-#trending {
-    position: absolute;
-    top: 620px;
-    right: 0px;
+.sidebox {
     display: flex;
     flex-direction: column;
     width: 300px;
-    height: 290px;
+    height: 400px;
     background-color: #1a1a1b;
     border: 1px solid #343536;
     border-radius: 4px;
+}
+
+.growing {
+    .header {
+        width: 100%;
+        height: 100px;
+        background-color: #141414;
+        background-size: cover;
+        position: relative;
+
+        h1 {
+            font-size: 16px;
+            color: white;
+            position: absolute;
+            bottom: 15px;
+            left: 15px;
+        }
+    }
+
+    .communities {
+        width: 100%;
+        height: 100%;
+
+        .community {
+            width: 100%;
+            height: 64px;
+            border-bottom: 1px solid #343536;
+
+            &:last-child {
+                border-bottom: none;
+            }
+
+            .inner {
+                width: 100%;
+                height: 64px;
+                max-width: 250px;
+                margin: auto;
+                display: flex;
+                align-items: center;
+    
+                b {
+                    color: white;
+                    font-size: 15px;
+                }
+
+                img {
+                    width: 30px;
+                    height: 30px;
+                    border-radius: 50%;
+                    margin-left: 15px;
+                }
+
+                p {
+                    color: rgba(255, 255, 255, 0.6);
+                    padding-left: 10px;
+                    font-weight: 500;
+                    font-size: 15px;
+                }
+            }
+        }
+    }
+}
+
+.trending {
+    margin-top: 20px;
     padding: 15px;
     box-sizing: border-box;
 
@@ -80,78 +142,6 @@ $main-color: #3193ef;
                     font-weight: 700;
                     font-size: 11px;
                     text-transform: uppercase;
-                }
-            }
-        }
-    }
-}
-
-#growing {
-    position: absolute;
-    top: 200px;
-    right: 0px;
-    display: flex;
-    flex-direction: column;
-    width: 300px;
-    height: 400px;
-    background-color: #1a1a1b;
-    border: 1px solid #343536;
-    border-radius: 4px;
-
-    .header {
-        width: 100%;
-        height: 100px;
-        background-color: #141414;
-        background-size: cover;
-        position: relative;
-
-        h1 {
-            font-size: 16px;
-            color: white;
-            position: absolute;
-            bottom: 15px;
-            left: 15px;
-        }
-    }
-
-    .communities {
-        width: 100%;
-        height: 100%;
-
-        .community {
-            width: 100%;
-            height: 64px;
-            border-bottom: 1px solid #343536;
-
-            &:last-child {
-                border-bottom: none;
-            }
-
-            .inner {
-                width: 100%;
-                height: 64px;
-                max-width: 250px;
-                margin: auto;
-                display: flex;
-                align-items: center;
-    
-                b {
-                    color: white;
-                    font-size: 15px;
-                }
-
-                img {
-                    width: 30px;
-                    height: 30px;
-                    border-radius: 50%;
-                    margin-left: 15px;
-                }
-
-                p {
-                    color: rgba(255, 255, 255, 0.6);
-                    padding-left: 10px;
-                    font-weight: 500;
-                    font-size: 15px;
                 }
             }
         }

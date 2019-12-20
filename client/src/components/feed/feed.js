@@ -1,4 +1,4 @@
-import React, { Component, useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Requests from "../../Requests";
 import DropDown from "../dropdown/dropdown";
 import Post from "./feedPost";
@@ -23,8 +23,8 @@ export default () => {
             <DropDown/>
             { feed.length > 0
                 ? feed.map((data, index) => <Post data={data} key={index}/>)
-                : [1, 2, 3].map(val => {
-                    return <LoadingPost/>
+                : [1, 2, 3].map(index => {
+                    return <LoadingPost key={index}/>
                 }) }
         </div>
     )

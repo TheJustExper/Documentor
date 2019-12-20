@@ -1,28 +1,33 @@
-import React, { Component, useState, useEffect } from 'react';
-import { BrowserRouter as Router, Link, Route, Switch } from "react-router-dom";
+import React, { Component } from 'react';
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 import Header from "../header/header";
-import Middle from "../middle/middle";
-import Post from "../post/post";
+import MainPage from "../../pages/Main/mainPage";
+import PostPage from "../../pages/Post/postPage";
 
 import "../../scss/file.scss";
 
-function App() {
-    let [ loggedIn, setLoggedIn ] = useState(false);
+class App extends Component {
+    state = {
+        loggedIn: false
+    }
 
-    return (
-        <Router>
-            <div id="main">
-                <Header/>
-                <Middle/>
-            </div>
-            <Switch>
-                <Route path="/post">
-                    <Post/>
-                </Route>
-            </Switch>
-        </Router>
-    );
+    // Add automatic login through cookies
+    componentDidMount() {}
+
+    render() {
+        return (
+            <Router>
+                <div id="main">
+                    <Header/>
+                    <Switch>
+                        <Route exact path="/"><MainPage/></Route>
+                        <Route path="/post/:id" render={props => <PostPage {...props} />}></Route>
+                    </Switch>
+                </div>
+            </Router>
+        );
+    }
 }
 
 export default App;

@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import "./sidebox.scss";
 
 export default () => {
@@ -29,8 +29,8 @@ export default () => {
   }
 
   return (
-    <div id="trending">
-      <h1>TRENDRING COMMUNITIES</h1>
+    <div className="sidebox trending">
+      <h1>TRENDING COMMUNITIES</h1>
       <div className="communities">{getTrendingCommunities()}</div>
     </div>
   );

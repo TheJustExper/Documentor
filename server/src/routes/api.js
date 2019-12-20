@@ -8,9 +8,9 @@ router.get("/feed", (req, res) => {
         return {
             title: "Test",
             description: "This is a testing post",
-            img: `https://picsum.photos/600/${between(300, 500)}`,
+            img: `http://iwiz-blog-cms.c.yimg.jp/c/blog-cms/promotionalads/online/600_500.png`,
             author: "Bob",
-            authorIcon: `https://picsum.photos/${between(30, 50)}/${between(30, 50)}`,
+            authorIcon: `https://cdn.drawception.com/images/avatars/647493-B9E.png`,
             sub: "Sports",
             upvotes: between(0, 999),
         }
