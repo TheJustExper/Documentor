@@ -9,11 +9,9 @@ export default class extends Component {
 	getSubData() {
 		const { postPage } = this.props;
 		const { img, description } = this.props.data;
-		/*
-			If their is a image passed aswell as a description then only return the image
-			as the description is shown in the post itself otherwise if it is shown on the
-			front page the post will be too long
-		*/
+	
+		// If the component is used on the page speficially for showing that post
+		// rather than on the front page with all the other posts
 		if (postPage) {
 			return (
 				<div>
@@ -22,6 +20,9 @@ export default class extends Component {
 				</div>
 			)
 		} else {
+			// If their is a image passed aswell as a description then only return the image
+			// as the description is shown in the post itself otherwise if it is shown on the
+			// front page the post will be too long
 			if (img && description) return (<div className="outer" onClick={() => window.location = img}><img className="post-image" src={img}/></div>)
 			if (description) return <p>{description}</p>;
 		}
