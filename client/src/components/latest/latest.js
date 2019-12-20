@@ -6,7 +6,7 @@ export default () => {
     const [ latest, setLatest ] = useState([]);
 
     useEffect(() => {
-        Requests.getLatest().then(setLatest);
+        Requests.getRequest("latest").then(setLatest);
     });
 
     function getLatest() {
