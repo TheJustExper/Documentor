@@ -2,10 +2,6 @@ import React, { Component } from 'react';
 import './feedPost.scss';
 
 export default class extends Component {
-	constructor(props) {
-		super(props);
-	}
-
 	getSubData() {
 		const { postPage } = this.props;
 		const { img, description } = this.props.data;

@@ -5,7 +5,7 @@ export default () => {
     let [ droppedDown, setDroppedDown ] = useState(false);
 
     return (
-        <div className="create-post" style={droppedDown ? { height: "100%" } : {}}>
+        <div className="create-post">
             <div className="top">
                 <button onClick={() => setDroppedDown(!droppedDown)}>Show post dropdown</button>
             </div>
