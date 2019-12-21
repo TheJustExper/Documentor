@@ -18,14 +18,20 @@ export default () => {
         Requests.getRequest("feed").then(setFeed);
     }, []);
 
+    function getFeed() {
+        if (feed.length > 0) {
+            return feed.map((data, index) => <Post data={data} key={index}/>)
+        } else {
+            return [1, 2, 3].map(index => {
+                return <LoadingPost key={index}/>
+            })
+        }
+    }
+
     return (
         <div id="feed">
             <DropDown/>
-            { feed.length > 0
-                ? feed.map((data, index) => <Post data={data} key={index}/>)
-                : [1, 2, 3].map(index => {
-                    return <LoadingPost key={index}/>
-                }) }
+            {getFeed()}
         </div>
     )
 }

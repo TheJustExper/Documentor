@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import FeedPost from "../../components/feed/feedPost";
-import Growing from "../../components/sidebox/growing";
+import Growing from "../../components/sidebox/trending";
 import Requests from "../../Requests";
 import "./postPage.scss";
 

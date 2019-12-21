@@ -7,16 +7,16 @@ export default () => {
 
     useEffect(() => {
         Requests.getRequest("latest").then(setLatest);
-    });
+    }, []);
 
     function getLatest() {
-        return [1, 2, 3, 4].map(index => {
+        return latest.map(({ title, description }, index) => {
             return (
                 <div className="item" key={index}>
                     <div className="image"></div>
                     <div className="text">
-                        <h1>Random</h1>
-                        <p>Lorem ipsum stuff</p>
+                        <h1>{title}</h1>
+                        <p>{description}</p>
                     </div>
                 </div>
             )

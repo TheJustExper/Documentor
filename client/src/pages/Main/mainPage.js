@@ -15,7 +15,9 @@ export default () => {
                 <Feed/>
                 <div>
                     <Growing/>
-                    <Trending/>
+                    <div style={{ marginTop: "20px" }}>
+                        <Trending/>
+                    </div>
                 </div>
             </div>
         </div>
