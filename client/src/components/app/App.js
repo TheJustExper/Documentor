@@ -12,7 +12,7 @@ import "../../scss/file.scss";
 
 class App extends Component {
     state = {
-        loggedIn: false
+        loggedIn: true
     }
 
     // Add automatic login through cookies
@@ -27,8 +27,7 @@ class App extends Component {
                         <Route exact path="/"><MainPage/></Route>
                         <Route exact path="/login"><Login/></Route>
                         <Route exact path="/register"><Register/></Route>
-                        <Route path="/post/:id" render={props => <PostPage {...props} />}></Route>
-                        <Route path="/post" render={props => <PostPage {...props} />}></Route>
+                        <Route path="/post" render={props => <PostPage loggedIn={this.state.loggedIn} {...props} />}></Route>
                     </Switch>
                 </div>
             </Router>

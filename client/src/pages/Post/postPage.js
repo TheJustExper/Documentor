@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import queryString from 'query-string';
+import CreateComment from "../../components/comment/comment";
 import FeedPost from "../../components/feed/feedPost";
 import Growing from "../../components/sidebox/trending";
 import Requests from "../../Requests";
@@ -14,7 +16,7 @@ export default class extends Component {
     }
 
     componentDidMount = () => {
-        const { id } = this.props.match.params;
+        const { id } = queryString.parse(this.props.location.search);
         if (id) {
             Requests.getPost(id).then((data) => {
                 this.setState(state => state.postData = data);
@@ -35,11 +37,17 @@ export default class extends Component {
         }
     }
 
+    showCreateComment() {
+        const { loggedIn } = this.props;
+        return <CreateComment loggedIn={loggedIn}/>;
+    }
+
     render() {
         return (
             <div id="postPage">
                 <div style={{ width: "680px" }}>
                     {this.showPost()}
+                    {this.showCreateComment()}
                 </div>
                 <Growing/>
             </div>

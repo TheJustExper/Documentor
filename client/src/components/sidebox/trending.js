@@ -16,7 +16,7 @@ export default () => {
       return (
         <div key={val} className="community">
           <div className="inner">
-            <img src="https://styles.redditmedia.com/t5_2t7no/styles/communityIcon_5b1rj1migm341.png"></img>
+            <img alt="backgroundImg" src="https://styles.redditmedia.com/t5_2t7no/styles/communityIcon_5b1rj1migm341.png"></img>
             <div className="text">
               <b>r/{getSub()}</b>
               <p>{Math.floor(Math.random() * 9999)} Members</p>

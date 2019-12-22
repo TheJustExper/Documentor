@@ -8,9 +8,9 @@ export default () => {
   return (
     <div className="loadingPost" style={{ height: between(100, 200) + "px" }}>
       <div className="sidebar">
-        <img src="https://image.flaticon.com/icons/png/512/626/626013.png" />
+        <img alt="arrow" src="https://image.flaticon.com/icons/png/512/626/626013.png" />
         <p>0</p>
-        <img src="https://image.flaticon.com/icons/png/512/626/626013.png" />
+        <img alt="arrow" src="https://image.flaticon.com/icons/png/512/626/626013.png" />
       </div>
       <div className="inner">
         <div className="text">

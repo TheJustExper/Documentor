@@ -27,25 +27,24 @@ export default class extends Component {
 	goToPost(id) {
 		// As i'm reusing this class for the "Post" that appears when u click on the front page one
 		// you need to not be able to click it again and go to the page that you're already on
-		if (window.location.href.includes(`/post/${id}`)) return;
-		window.location.href = `/post/${id}`
+		if (window.location.href.includes(`/post?id=${id}`)) return;
+		window.location.href = `/post?id=${id}`
 	}
 
 	render() {
-		const { postPage } = this.props;
 		const { id, title, upvotes, sub, author, authorIcon } = this.props.data;
 
 		return (
-			<div className="post" key={id} onClick={() => this.goToPost(id)} style={postPage ? { maxHeight: "none" } : {}}>
+			<div className="post" key={id} onClick={() => this.goToPost(id)}>
 				<div className="sidebar">
-					<img src="https://image.flaticon.com/icons/png/512/626/626013.png" />
+					<img alt="arrow" src="https://image.flaticon.com/icons/png/512/626/626013.png" />
 					<p>{upvotes}</p>
-					<img src="https://image.flaticon.com/icons/png/512/626/626013.png" />
+					<img alt="arrow" src="https://image.flaticon.com/icons/png/512/626/626013.png" />
 				</div>
 				<div className="inner">
 					<div className="text">
 						<div className="img">
-							<img className="user-icon" src={authorIcon}/>
+							<img alt="userIcon" className="user-icon" src={authorIcon}/>
 							<b>r/{sub}</b>
 							<p>Posted by <a href={`/u/${author}`}>u/{author}</a> 5 hours ago</p>
 						</div>
