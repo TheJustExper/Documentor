@@ -9,15 +9,7 @@ export default class extends Component {
         super(props);
 
         this.state = {
-            postData: {
-                title: "Test",
-                description: "This is a testing post",
-                img: `http://iwiz-blog-cms.c.yimg.jp/c/blog-cms/promotionalads/online/600_500.png`,
-                author: "Bob",
-                authorIcon: `https://cdn.drawception.com/images/avatars/647493-B9E.png`,
-                sub: "Sports",
-                upvotes: 5,
-            }
+            postData: {}
         }
     }
 
@@ -28,11 +20,24 @@ export default class extends Component {
         });
     }
 
+    showPost() {
+        if (Object.keys(this.state.postData).length > 0) { 
+            return <FeedPost data={this.state.postData} postPage={true}/> 
+        } else {
+            return (
+                <div className="noPost">
+                    <h1>Error no post here</h1>
+                    <p>The post that you were looking for is either deleted or was never here</p>
+                </div>
+            )
+        }
+    }
+
     render() {
         return (
             <div id="postPage">
                 <div style={{ width: "680px" }}>
-                    <FeedPost data={this.state.postData} postPage={true}/>
+                    {this.showPost()}
                 </div>
                 <Growing/>
             </div>

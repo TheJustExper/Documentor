@@ -1,0 +1,39 @@
+.section {
+    width: 100%;
+    height: calc(100% - 60px);
+    margin: auto;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .inner {
+        width: 350px;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: #1a1a1b;
+        border: 1px solid #343536;
+        padding: 25px;
+        box-sizing: border-box;
+
+        h1 {
+            color: white;
+            padding-bottom: 15px;
+            text-transform: uppercase;
+            font-size: 20px;
+        }
+
+        button {
+            width: 100%;
+            height: 40px;
+            border: none;
+            color: white;
+            margin-top: 10px;
+            background-color: #3193ef;
+        }
+    }
+}

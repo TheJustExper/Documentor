@@ -12,14 +12,14 @@ export default class extends Component {
 			return (
 				<div>
 					<p>{description}</p>
-					<div className="outer" onClick={() => window.location = img}><img className="post-image" src={img}/></div>
+					<div className="outer" onClick={() => window.location = img}><img alt="postPhoto" className="post-image" src={img}/></div>
 				</div>
 			)
 		} else {
 			// If their is a image passed aswell as a description then only return the image
 			// as the description is shown in the post itself otherwise if it is shown on the
 			// front page the post will be too long
-			if (img && description) return (<div className="outer" onClick={() => window.location = img}><img className="post-image" src={img}/></div>)
+			if (img && description) return (<div className="outer" onClick={() => window.location = img}><img alt="postPhoto" className="post-image" src={img}/></div>)
 			if (description) return <p>{description}</p>;
 		}
 	}
@@ -32,12 +32,11 @@ export default class extends Component {
 	}
 
 	render() {
-		const id = 10; // Need to add ID of post from posts
 		const { postPage } = this.props;
-		const { title, upvotes, sub, author, authorIcon } = this.props.data;
+		const { id, title, upvotes, sub, author, authorIcon } = this.props.data;
 
 		return (
-			<div className="post" onClick={() => this.goToPost(id)} style={postPage ? { maxHeight: "none" } : {}}>
+			<div className="post" key={id} onClick={() => this.goToPost(id)} style={postPage ? { maxHeight: "none" } : {}}>
 				<div className="sidebar">
 					<img src="https://image.flaticon.com/icons/png/512/626/626013.png" />
 					<p>{upvotes}</p>

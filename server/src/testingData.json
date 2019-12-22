@@ -1,0 +1,14 @@
+{
+    "posts": [
+        {
+            "id": 1,
+            "title": "Test",
+            "description": "This is a testing post",
+            "img": "http://iwiz-blog-cms.c.yimg.jp/c/blog-cms/promotionalads/online/600_500.png",
+            "author": "Bob",
+            "authorIcon": "https://cdn.drawception.com/images/avatars/647493-B9E.png",
+            "sub": "Sports",
+            "upvotes": 5
+        }
+    ]
+}
