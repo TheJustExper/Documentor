@@ -15,9 +15,11 @@ export default class extends Component {
 
     componentDidMount = () => {
         const { id } = this.props.match.params;
-        Requests.getPost(id).then((data) => {
-            this.setState(state => state.postData = data);
-        });
+        if (id) {
+            Requests.getPost(id).then((data) => {
+                this.setState(state => state.postData = data);
+            });
+        }
     }
 
     showPost() {

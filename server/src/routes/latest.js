@@ -2,6 +2,7 @@ const between = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
 
 module.exports = {
     name: "/latest",
+    type: "GET",
     router: function(req, res) {
         let data = [1, 2, 3, 4].map(() => {
             return {

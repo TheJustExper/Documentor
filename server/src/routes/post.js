@@ -3,6 +3,7 @@ const { posts } = require("../testingData.json");
 
 module.exports = {
     name: "/post",
+    type: "GET",
     router: function(req, res) {
         const { id } = req.query;
         if (id && Object.keys(req.query).length == 1) {

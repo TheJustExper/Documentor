@@ -25,6 +25,7 @@ class App extends Component {
                     <Header loggedIn={this.state.loggedIn}/>
                     <Switch>
                         <Route exact path="/"><MainPage/></Route>
+                        <Route exact path="/login"><Login/></Route>
                         <Route exact path="/register"><Register/></Route>
                         <Route path="/post/:id" render={props => <PostPage {...props} />}></Route>
                         <Route path="/post" render={props => <PostPage {...props} />}></Route>

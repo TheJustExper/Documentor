@@ -7,9 +7,14 @@ export default class extends Component {
         const { loggedIn } = this.props;
 
         if (loggedIn) {
-            return <li><Link to="/login">Login</Link></li>
+            return <li><Link to="/logout">Logout</Link></li>
         } else {
-            return <li><Link to="/register">Register</Link></li>
+            return (
+                <div style={{ display: "flex" }}>
+                    <li><Link to="/login">Login</Link></li>
+                    <li><Link to="/register">Register</Link></li>
+                </div>
+            )
         }
     }
 
