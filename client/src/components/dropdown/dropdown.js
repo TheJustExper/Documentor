@@ -7,7 +7,7 @@ export default () => {
     return (
         <div className="create-post">
             <div className="top">
-                <button onClick={() => setDroppedDown(!droppedDown)}>Show post dropdown</button>
+                <button className="button-primary--gold" onClick={() => setDroppedDown(!droppedDown)}>Show post dropdown</button>
             </div>
             { droppedDown ? 
                <div style={{ margin: "0px 10px 10px 10px" }}>

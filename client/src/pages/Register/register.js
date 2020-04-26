@@ -25,11 +25,10 @@ export default class extends Component {
     }
 
     resetErrors() {
-        this.setState({ usernameError: null });
-        this.setState({ passwordError: null });
+        this.setState({ usernameError: null, passwordError: null });
     }
 
-    handleUsername(type, event) {
+    handleValue(type, event) {
          this.setState({ [type]: event.target.value });
     }
     
@@ -39,8 +38,8 @@ export default class extends Component {
             <div className="section">
                 <div className="inner">
                     <h1>Register section</h1>
-                    <Input type="username" placeholder="Username" onChange={(e) => this.handleUsername("username", e)} error={usernameError}/>
-                    <Input type="password" placeholder="Password" onChange={(e) => this.handleUsername("password", e)} error={passwordError}/>
+                    <Input type="username" placeholder="Username" onChange={(e) => this.handleValue("username", e)} error={usernameError}/>
+                    <Input type="password" placeholder="Password" onChange={(e) => this.handleValue("password", e)} error={passwordError}/>
                     <button onClick={this.register}>Register</button>
                 </div>
             </div>

@@ -7,12 +7,16 @@ export default class extends Component {
         const { loggedIn } = this.props;
 
         if (loggedIn) {
-            return <li><Link to="/logout">Logout</Link></li>
+            return (
+                <div className="buttons">
+                    <button className="button-primary--gold">Login</button>
+                </div>
+            )
         } else {
             return (
-                <div style={{ display: "flex" }}>
-                    <li><Link to="/login">Login</Link></li>
-                    <li><Link to="/register">Register</Link></li>
+                <div className="buttons">
+                    <button className="button-primary--gold">Login</button>
+                    <button className="button-primary--gold">Register</button>
                 </div>
             )
         }
@@ -21,11 +25,18 @@ export default class extends Component {
     render() {
         return (
             <div id="header">
-                <h1>Documentor</h1>
-                <ul>
-                    <li><Link to="/">Home</Link></li>
-                    { this.loginSection() }
-                </ul>
+                <div className="inner">
+                    <h1>Documentor</h1>
+                    <ul>
+                        <li><Link to="/">Home</Link></li>
+                        <li><Link to="/gamble">Gamble</Link></li>
+                    </ul>
+                </div>
+                <div className="inner">
+                    <div className="buttons">
+                        { this.loginSection() }
+                    </div>
+                </div>
             </div>
         )
     }

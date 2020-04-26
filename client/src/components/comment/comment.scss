@@ -3,8 +3,8 @@ $main-color: #3193ef;
 .createComment {
     width: 100%;
     border-radius: 4px;
-    background-color: #1a1a1b;
-    border: 1px solid #343536;
+    background: #16171c;
+    border: 1px solid #0c0d0f;
     margin-bottom: 20px;
     box-sizing: border-box;
     overflow: hidden;
@@ -17,12 +17,17 @@ $main-color: #3193ef;
         border: none;
         border-radius: 2px;
         box-sizing: border-box;
-        background-color: #272729;
         color: white;
         padding: 15px;
         color: rgba(255, 255, 255, .3);
         font-size: 15px;
         font-family: Roboto;
         resize: none;
+    }
+
+    h1 {
+        color: white;
+        font-size: 18px;
+        font-weight: 500;
     }
 }

@@ -21,7 +21,7 @@ export default () => {
               <b>r/{getSub()}</b>
               <p>{Math.floor(Math.random() * 9999)} Members</p>
             </div>
-            <button>Join</button>
+            <button className="button-primary--gold">Join</button>
           </div>
         </div>
       );

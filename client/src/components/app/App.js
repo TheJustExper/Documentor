@@ -8,11 +8,13 @@ import PostPage from "../../pages/Post/postPage";
 import Login from "../../pages/Login/login";
 import Register from "../../pages/Register/register";
 
+import Gamble from "../../pages/Gamble/Gamble";
+
 import "../../scss/file.scss";
 
 class App extends Component {
     state = {
-        loggedIn: true
+        loggedIn: false
     }
 
     // Add automatic login through cookies
@@ -27,6 +29,7 @@ class App extends Component {
                         <Route exact path="/"><MainPage/></Route>
                         <Route exact path="/login"><Login/></Route>
                         <Route exact path="/register"><Register/></Route>
+                        <Route exact path="/gamble"><Gamble/></Route>
                         <Route path="/post" render={props => <PostPage loggedIn={this.state.loggedIn} {...props} />}></Route>
                     </Switch>
                 </div>
