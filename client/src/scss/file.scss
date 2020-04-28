@@ -1,8 +1,8 @@
-@import url(https://fonts.googleapis.com/css?family=Rajdhani:300,400,500,600,700&display=swap);
-@import url(https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap);
-@import url(https://fonts.googleapis.com/css?family=Lato:400,700,900&display=swap);
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap');
 
-@import "./themes/blue.scss";
+$gray: rgb(223, 223, 223);
+$green: #1B886A;
+$darkgray: #636363;
 
 * {
     margin: 0;
@@ -11,13 +11,176 @@
 
 body {
     height: 100%;
-    background-color: #1a1c24;
-    font-family: Lato;
+    background-color: white;
+    font-family: "Roboto";
 }
 
 #main {
     width: 100%;
     height: 100vh;
+}
+
+#middle {
+    max-width: 1150px;
+    margin: auto;
+    height: 100%;
+
+    .sidebar {
+        width: 340px;
+        height: 500px;
+        border: 1px solid $gray;
+    }
+
+    .courses {
+        width: 100%;
+
+        .course {
+            width: 100%;
+            height: 60px;
+            border: 1px solid $gray;
+            background-color: #FCFBFC;
+        }
+    }
+
+    .inner {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        .left {
+            width: calc(100% - 420px);
+
+            .section {
+                padding-bottom: 30px;
+                border-bottom: 2px solid $gray;
+
+                &:nth-child(2) {
+                    padding-top: 20px;
+
+                    .title {
+                        text-transform: uppercase;
+                        font-weight: 600;
+                        font-size: 12px;
+                        color: $darkgray;
+                        padding-bottom: 10px;
+                    }
+
+                    p {
+                        color: rgb(75, 75, 75);
+                        font-weight: 600;
+                        font-size: 15px;
+                        line-height: 25px;
+                    }
+                }
+            }
+
+            .info {
+                margin-top: 22px;
+                width: 100%;
+                height: 75px;
+                border: 1px solid $gray;
+                border-radius: 5px;
+                background-color: #F9F9F9;
+                display: flex;
+                flex-direction: row;
+
+                div {
+                    border: 1px solid $gray;
+                    width: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: column;
+
+                    b {
+                        font-size: 12px;
+                        color: rgb(112, 112, 112);
+                        text-transform: uppercase;
+                    }
+
+                    p {
+                        font-weight: 600;
+                        margin-top: 7px;
+                        color: $darkgray;
+                    }
+                }
+            }
+
+            .title {
+                h1 {
+                    font-size: 24px;
+                }
+        
+                .progress {
+                    margin-top: 20px;
+        
+                    p {
+                        color: $darkgray;
+                        font-size: 12px;
+                        font-weight: 700;
+                        text-transform: uppercase;
+                    }
+        
+                    .outer {
+                        border-radius: 15px;
+                        height: 5px;
+                        width: calc(100% - 90px);
+                        background-color: #EBEBEB;
+                        margin-top: 15px;
+        
+                        #bar {
+                            height: 100%;
+                            width: 30%;
+                            border-radius: 50px;
+                            background-color: $green;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
+    .boxes {
+        width: 100%;
+        height: 55px;
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 35px;
+
+        .enabled {
+            background-color: #E9F5F1 !important;
+            border-bottom: 2px solid #1B886A !important;
+
+            h1 {
+                color: #1B886A;
+            }
+        }
+
+        .box {
+            width: 400px;
+            height: 100%;
+            background-color: #FCFBFC;
+            border: 1.2px solid $gray;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            h1 {
+                font-size: 14px;
+                text-transform: uppercase;
+            }
+
+            &:nth-child(1) {
+                border-radius: 5px 0px 0px 5px;
+            }
+
+            &:last-child {
+                border-radius: 0px 5px 5px 0px;
+            }
+        }
+    }
 }
 
 ::-webkit-scrollbar {
