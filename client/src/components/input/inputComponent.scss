@@ -1,0 +1,41 @@
+@import "../../scss/colors.scss";
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active  {
+    -webkit-box-shadow: 0 0 0 30px white inset !important;
+}
+
+.outer {
+    display: flex;
+    flex-direction: column;
+
+    label {
+        font-size: 14px;
+        font-weight: 500;
+        color: #aaa;
+    }
+
+    input {
+        height: 45px;
+        font-size: 16px;
+        font-weight: 700;
+        color: black;
+        border-bottom: 2px solid transparent;
+        border-image: linear-gradient(90deg, rgba(241,241,241,1) 0%, rgba(241,241,241,1) 100%);
+        border-image-slice: 1;
+        box-sizing: border-box !important;
+        border-width: 0px 0px 2px 0px;
+
+        &:focus {
+            outline: none;
+            border-image: $gradient;
+            border-image-slice: 1;
+        }
+    }
+
+    .remember {
+
+    }
+}
